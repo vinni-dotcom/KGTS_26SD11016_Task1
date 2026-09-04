@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrinda Goel | Tech Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables for easy color management */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --text-main: #1f2937;
+            --text-light: #6b7280;
+            --bg-gradient: linear-gradient(135deg, #f0f9ff 0%, #cbebff 100%);
+            --card-bg: rgba(255, 255, 255, 0.85);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-main);
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Profile Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 5px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Card Layout for Sections */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        @media (min-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            /* Make the About Me span both columns */
+            #introduction {
+                grid-column: span 2;
+            }
+        }
+
+        section {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Custom accent line under headings */
+        h2::after {
+            content: "";
+            height: 3px;
+            width: 40px;
+            background: var(--primary);
+            display: block;
+            border-radius: 2px;
+            margin-top: 5px;
+            position: absolute;
+            margin-top: 35px;
+        }
+
+        p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        li {
+            color: var(--text-light);
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        /* Custom bullet points */
+        li::before {
+            content: "✦";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2rem;
+        }
+
+        strong {
+            color: var(--text-main);
+        }
+
+        /* Simple loading animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="C:\Users\LocalNIC\Downloads\IMG_20260623_095339_542.jpg" alt="Vrinda Goel" class="profile-img">
+            <h1>Vrinda Goel</h1>
+            <p class="subtitle">Mathematics Major @ IIT Kharagpur</p>
+        </header>
+
+        <div class="content-grid">
+            <section id="introduction">
+                <h2>About Me</h2>
+                <p>Hello! I am a first year undergraduate student of Education Department with a major in Mathematics at IIT Kharagpur. Originally from Delhi, I enjoy exploring the intersection of logical problem-solving, psychology, physics and music.</p>
+            </section>
+
+            <section id="tech-team">
+                <h2>Why The Tech Team?</h2>
+                <p>I am eager to transition my foundational programming skills into practical, collaborative projects. While I have experience with computational problem-solving and python syntax, I want to step out of my comfort zone to learn web deployment ecosystems and build alongside peers who share a strong dedication to technology.</p>
+            </section>
+
+            <section id="favourite-game">
+                <h2>Strategic Passion</h2>
+                <p>My absolute favourite board game is <strong>Chess</strong>. I deeply enjoy the analytical side of the game. The <em>Philidor Defense</em> is currently one of my preferred opening strategies.</p>
+            </section>
+
+            <section id="other-interests">
+                <h2>Current Tinkering</h2>
+                <ul>
+                    <li><strong>Physical Computing:</strong> Designing Arduino Uno circuits.</li>
+                    <li><strong>Game Development:</strong> Exploring physics engines and game mechanics using tools like Godot and Unity.</li>
+                    <li><strong>AI:</strong>Exploring AI prompts for image generation, editing, highlighting and making edits .</li>
+                </ul>
+</section>
+
+             <section id="fun-facts" class="cute-card">
+               <h3>✨ Quirky Developer Stats ✨</h3>
+    <div class="emoji-list">
+        <p>🛡️ <strong>Chess Vibe:</strong> Playing the Philidor Defense (and praying it works).</p>
+        <p>📺 <strong>Currently Bingeing:</strong> <em>You Are My Fateful Love</em>.</p>
+        <p>🧪 <strong>Science Vibe:</strong> Applying Slater's rules to calculate my exact shielding effect against bad vibes. ⚛️✨</p>
+                <p>💥 <strong>Game Dev Progress:</strong> Currently testing how fast Unity can crash my PC (it is a feature, not a bug). 🚀🔥</p>
+    </div>
+    
+    <div class="bouncing-emojis">
+        <span>🎮</span>
+        <span>👾</span>
+        <span>🧠</span>
+        <span>💻</span>
+        <span>✨</span>
+    </div>
+</section>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>
